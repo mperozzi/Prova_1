@@ -6,7 +6,7 @@ import java.io.InputStream;
 public class Main {
 
     public static void main(String[] args) {
-	System.out.println("Hello World");
-	System.out.println("ciao");
+	Tabella t = new Tabella();
+	t.insert_tabella();
     }
 }
