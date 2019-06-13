@@ -1,9 +1,10 @@
 package com.company;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Tabella {
-    LinkedList l;
+    List l;
 
     public void insert_tabella() {
         l = new LinkedList();
