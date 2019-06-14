@@ -17,16 +17,16 @@ public class Riga_tabella {
         return c3;
     }
 
-    public void setC1(Colonna1 c1) {
-        this.c1 = c1;
+    public void setC1(int c1) {
+        this.c1.setColonna1(c1);
     }
 
-    public void setC2(Colonna2 c2) {
-        this.c2 = c2;
+    public void setC2(String c2) {
+        this.c2.setColonna2(c2);
     }
 
-    public void setC3(Colonna3 c3) {
-        this.c3 = c3;
+    public void setC3(String c3) {
+        this.c3.setColonna3(c3);
     }
 }
 
