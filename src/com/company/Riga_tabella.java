@@ -1,9 +1,9 @@
 package com.company;
 
 public class Riga_tabella {
-    Colonna1 c1 = new Colonna1();
-    Colonna2 c2 = new Colonna2();
-    Colonna3 c3 = new Colonna3();
+    private Colonna1 c1 = new Colonna1();
+    private Colonna2 c2 = new Colonna2();
+    private Colonna3 c3 = new Colonna3();
 
     public Colonna1 getC1() {
         return c1;
