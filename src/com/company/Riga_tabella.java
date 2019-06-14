@@ -1,9 +1,16 @@
 package com.company;
 
 public class Riga_tabella {
-    private Colonna1 c1 = new Colonna1();
-    private Colonna2 c2 = new Colonna2();
-    private Colonna3 c3 = new Colonna3();
+    private Colonna1 c1; // = new Colonna1();
+    private Colonna2 c2; // = new Colonna2();
+    private Colonna3 c3; // = new Colonna3();
+
+    //Costruttore della classe -> Inizializza lo stato interno dell'oggetto in maniera tale che ad ogni istanza l'oggetto puo essere utilizzato subito
+    Riga_tabella() {
+        c1 = new Colonna1();
+        c2 = new Colonna2();
+        c3 = new Colonna3();
+    }
 
     public Colonna1 getC1() {
         return c1;

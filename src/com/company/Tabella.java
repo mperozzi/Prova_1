@@ -3,15 +3,16 @@ package com.company;
 import java.util.*;
 
 public class Tabella {
-    private List<Riga_tabella> l = new ArrayList<>();
+    private List<Riga_tabella> l;
 
-    public List<Riga_tabella> getL() {
-        return l;
+    //Costruttore della classe
+    Tabella() {
+        l = new ArrayList<>();
     }
 
-    public void setL(List<Riga_tabella> l) {
-        this.l = l;
-    }
+    public List<Riga_tabella> getL() { return l; }
+
+    public void setL(List<Riga_tabella> l) { this.l = l; }
 
     //Restituisce la dimensione della lista (numero di righe della tabella)
     public int return_size(){
@@ -28,9 +29,10 @@ public class Tabella {
         l.add(size, r);
     }
 
-    //Inserimento di più oggetti in coda alla lista (in fondo alla tabella)
-    public void insert_tab(int sizelist, int n) {
-        for (int i = sizelist; i<sizelist + n; i++) {
+    //Inserimento di n oggetti in coda alla lista (in fondo alla tabella)
+    public void insert_tab(int n) {
+        int size = return_size();
+        for (int i = size; i<size + n; i++) {
             Riga_tabella r = new Riga_tabella();
             r.setC1(i);
             r.setC2("Cane " + (i));
@@ -40,8 +42,9 @@ public class Tabella {
     }
 
     //Stampa a schermo la lista di oggetti con tutti gli attributi (stampa a schermo la tabella completa)
-    public void print_tab(int sizel) {
-        for (int i=0; i<sizel; i++) {
+    public void print_tab() {
+        int size = return_size();
+        for (int i=0; i<size; i++) {
             System.out.print(l.get(i).getC1().getColonna1() + "    ");
             System.out.print(l.get(i).getC2().getColonna2() + "    ");
             System.out.print(l.get(i).getC3().getColonna3() + "    ");
@@ -51,7 +54,7 @@ public class Tabella {
     }
 
     //Sovrascrive un attributo di un oggetto della lista
-    public void overwrite_attribute_from_list(int i, String s) {
+    public void overwrite_attribute(int i, String s) {
         l.get(i).setC2(s);
     }
 }
